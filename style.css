@@ -1,31 +1,33 @@
 body{
-    font-family: "Roboto" , sans-serif;
+    font-family: "Roboto", sans-serif;
     background: #ffffff;
     width: 100%;
     height: 100vh;
-    margin: 0;
     color: #000000;
-    font-size: 15px;
+    margin: 1em;
+    font-size: 1.2rem;
 }
 .container {
+    position: relative;
     width: 50%;
+    min-width: 650px;
+    max-width: 420px;
     margin: 0 auto;
     padding: 10px;
 }
 .items {
-    padding: 8px 48px;
+    padding: 8px 8px;
     margin: 8px;
     border: 1px solid gray;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 input[type="text"]{
     outline: none;
     width: 40%;
-    padding: 8px 25px;
+    padding: 1px 1px;
     border: 0px;
     border-bottom: 1px solid #DDD;
-    margin: 15px;
-    font-size: 16px;
+    margin: 10px;
 }
 .items {
     text-align:left;
@@ -34,17 +36,24 @@ input[type="text"]{
     font-family: "Roboto" , sans-serif;
     font-weight: normal;
     color: gray;
+    overflow: hidden;
+
 }
 .items input{
-    margin: 0px 0px 0px 0px;
+    margin: 0;
     position: relative;
-    float:right;
+    float: right;
+
 }
+
 .close {
     position: absolute;
-    right: 160px;
-    top: 35px;
-    font-weight: bold;
+    margin: 0 auto;
+    left: 90%;
+    top: 5%;
+    cursor: pointer;
+    font-weight: 900;
+
 }
 .close {
     background-color: white;
@@ -54,10 +63,7 @@ input[type="text"]{
     font-size: 15px;
 }
 .close:hover {
-    color: rgb(66, 65, 65);
     color: black;
-    cursor: pointer;
-    font-size: small;
 }
 .items input::before {
     position: absolute;
@@ -73,7 +79,10 @@ input[type="text"]{
     cursor: pointer;
     transition: 0.3s all ease;
 }
-.checkbox:checked +label{
+.items {
+    color: black;
+}
+.checkbox:checked +label +.items{
     color: black;
     animation-name: label-checked;
     animation-duration: 1s
@@ -91,6 +100,8 @@ input[type="text"]{
     position: absolute;
     content: "✔";
     color: green;
+
+
 }
 .items::after{
     font-weight: bold;
@@ -99,38 +110,39 @@ input[type="text"]{
 .items:hover , label:hover{
     color: black;
 }
-.button {
+.button-container {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     margin-top: 30px;
 }
-.button input {
+.button-container input {
     width: 35%;
     font-size: 15px;
     border-radius: 6px;
     padding: 15px;
     cursor: pointer;
 }
-.button input[type='button'] {
+.button-container input[type='button'] {
     background-color: white;
     color: gray;
     border-color: gray;
 
 }
-.button input[type='button']:hover {
+.button-container input[type='button']:hover {
     background-color: gray;
     color: black;
     box-shadow: 0 10px 10px #c8aff5;
 }
-.button input[type='submit'] {
+.button-container input[type='submit'] {
     margin-left: 2%;
     background: linear-gradient(90deg,#54a8f7 , #7e87fa );
     border: none;
     color: white;
 }
-.button input[type='submit']:hover {
+.button-container input[type='submit']:hover {
     background: linear-gradient(90deg, #54b8f6 , #525cf6);
     box-shadow: 0 10px 10px #c8aff5;
 }
+
